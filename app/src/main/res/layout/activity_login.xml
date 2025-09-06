@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="26dp">
 
     <ImageView
         android:id="@+id/personIcon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/ic_person"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,8 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connexion"
+        android:textColor="@color/black"
+        android:text="@string/connect"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/personIcon"
@@ -30,32 +31,35 @@
         android:id="@+id/emailInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="@string/email"
         android:background="@drawable/edittext_rounded"
         android:padding="12dp"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="26dp"/>
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Mot de passe"
+        android:layout_marginTop="24dp"
         android:background="@drawable/edittext_rounded"
-        android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/emailInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Mot de passe"
         android:inputType="textPassword"
-        android:layout_marginTop="8dp"/>
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput" />
 
     <Button
+
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Se connecter"
         app:layout_constraintTop_toBottomOf="@id/passwordInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +70,7 @@
         android:id="@+id/registerLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/teal_700"
         android:text="Pas de compte ? S'inscrire"
         app:layout_constraintTop_toBottomOf="@id/loginButton"
         app:layout_constraintStart_toStartOf="parent"

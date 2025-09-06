@@ -21,7 +21,7 @@
             android:exported="false" />
         <activity
             android:name=".edittext_rounded"
-            android:exported="false" /> <!-- LoginActivity comme activité de lancement -->
+            android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true">
@@ -30,10 +30,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- RegisterActivity -->
+        </activity>
         <activity
             android:name=".activities.RegisterActivity"
-            android:exported="false" /> <!-- MainActivity -->
+            android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
             android:exported="false" />

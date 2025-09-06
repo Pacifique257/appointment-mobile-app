@@ -2,128 +2,195 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="26dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/personIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Créer un compte"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personIcon" />
 
         <EditText
             android:id="@+id/lastNameInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
             android:hint="Nom"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="textPersonName"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
         <EditText
             android:id="@+id/firstNameInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Prénom"
-            app:layout_constraintTop_toBottomOf="@id/lastNameInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="textPersonName"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastNameInput" />
 
         <EditText
             android:id="@+id/emailInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Email"
-            app:layout_constraintTop_toBottomOf="@id/firstNameInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="textEmailAddress"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstNameInput" />
 
         <Spinner
             android:id="@+id/roleInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/emailInput"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/emailInput" />
 
         <EditText
             android:id="@+id/phoneInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Téléphone"
-            app:layout_constraintTop_toBottomOf="@id/roleInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="phone"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roleInput" />
 
         <EditText
             android:id="@+id/birthDateInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Date de naissance (YYYY-MM-DD)"
-            app:layout_constraintTop_toBottomOf="@id/phoneInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="date"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneInput" />
 
         <EditText
             android:id="@+id/addressInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Adresse"
-            app:layout_constraintTop_toBottomOf="@id/birthDateInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPostalAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="textPostalAddress"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birthDateInput" />
+
+        <TextView
+            android:id="@+id/genderHint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Genre :"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressInput" />
 
         <RadioGroup
             android:id="@+id/genderInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/addressInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="horizontal">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderHint">
+
             <RadioButton
                 android:id="@+id/maleRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masculin"/>
+                android:text="Masculin" />
+
             <RadioButton
                 android:id="@+id/femaleRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Féminin"/>
+                android:layout_marginStart="16dp"
+                android:text="Féminin" />
         </RadioGroup>
 
         <EditText
             android:id="@+id/passwordInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Mot de passe"
-            app:layout_constraintTop_toBottomOf="@id/genderInput"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="textPassword"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderInput" />
 
         <Button
             android:id="@+id/registerButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="S'inscrire"
-            app:layout_constraintTop_toBottomOf="@id/passwordInput"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/passwordInput" />
 
         <TextView
             android:id="@+id/loginLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Déjà un compte ? Se connecter"
-            app:layout_constraintTop_toBottomOf="@id/registerButton"
+            android:textColor="@color/link_color"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/registerButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

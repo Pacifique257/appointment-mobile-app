@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient.Builder().build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(ApiConfig.BASE_URL) // https://c549d1245af8.ngrok-free.app/api/v1/
+                .baseUrl(ApiConfig.BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
